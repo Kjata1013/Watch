@@ -11,6 +11,9 @@ void mode_test(uint8_t action){
   if((now.hour() == 0   ) && (now.minute() == 0) && (now.second() <  8)) {
     currentDay++;
   }
+  if (currentDay > 6) {
+    currentDay = 0;
+  }
   watch.fillScreen(0);
 
   switch (currentDay){
