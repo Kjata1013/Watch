@@ -1,13 +1,9 @@
-
  
 
-
+int currentDay = 1;
 void mode_test(uint8_t action){
-   Wire.begin();
-  RTC.begin();
-  int currentDay = 5;
+  
    DateTime now = RTC.now();
-  // If clock is unset, set it to compile time and jump to time-setting mode
   if((now.hour() == 0   ) && (now.minute() == 0) && (now.second() <  8)) {
     currentDay++;
   }
